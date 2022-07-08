@@ -39,7 +39,7 @@ old nav bar
             <a class="navbar-item" href="https://github.com/Shakyo-choudhury">
               GitHub!
             </a>
-            <a class="navbar-item" href="https://codewithshakyo.blogspot.com/">
+            <a class="navbar-item" href="https://codewithshakyohttps://re-launch-ltd.blogspot.com//">
               Blog
             </a>
         
