@@ -1,0 +1,169 @@
+https://youtu.be/pq-FE14yH0k
+
+
+        <div class="file">
+          <div clas="field">
+          <label class="label">SEND A FILE OR IMAGE(PREFFERABLY IMAGE)</label>
+          <div class="control">
+            <input class="file-input" type="file" name="resume">
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fas fa-upload"></i>
+              </span>
+              <span class="file-label">
+                Choose a file…
+              </span>
+            </span>
+          </div>
+          </label>
+        </div>
+       </div>
+
+old nav bar
+<nav class="navbar" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="https://www.youtube.com/channel/UCsTBIx1rTYG_zYJVCqJEfoA">
+              <img alt="blog" src="https://images.unsplash.com/photo-1526925539332-aa3b66e35444?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+        
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a class="navbar-brand" href="{% url 'homepage' %}">Home</a>
+            </div>
+            <a class="navbar-item" href="https://github.com/Shakyo-choudhury">
+              GitHub!
+            </a>
+            <a class="navbar-item" href="https://codewithshakyo.blogspot.com/">
+              Blog
+            </a>
+        
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                More
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="/about">
+                  About
+                </a>
+              
+                <a class="navbar-item" href="/contact">
+                  Contact
+                </a>
+                <a class="navbar-item" href="/announcements">
+                  Announcements
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item" href="https://www.youtube.com/channel/UCsTBIx1rTYG_zYJVCqJEfoA">
+                  YouTube Channel
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Logged In As {{ user.username }}
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  User Id {{ user_id }}
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item" href="{% url 'logout' %}">
+                  Logout
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-light" href="{% url 'login' %}">
+                  Log in
+                </a>
+               
+              </div>
+        
+            </div>
+          </div>
+        
+        </nav>
+
+
+
+        login page
+        {% extends 'base1.html' %}
+
+{% block content %}
+
+<h2 class ="text-center"> Login</h2>
+
+<div class = "col-md-6 offset-md-3"> 
+
+<form method ="POST">
+
+    {% csrf_token %}
+		
+
+	  <div class="form-group">
+
+	    <input type="text" class="form-control" placeholder="Enter Username" name = "username">
+
+	  </div>
+	  <div class="form-group">
+
+	    <input type="password" class="form-control"  placeholder="Enter Password" name="password"> 
+	  </div>
+	 
+
+	  <button type="submit" class="btn btn-secondary">Login</button>
+	</form>
+
+</div>
+
+{% endblock %}
+
+register 
+{% extends 'base1.html' %}
+
+{% block content %}
+
+<h2 class ="text-center"> Register </h2>
+
+<div class = "col-md-6 offset-md-3"> 
+
+<form method="POST" action="{% url 'register' %}">
+		{% csrf_token %}
+
+		{% if form.errors %}
+		<div class="alert alert-danger alart-dismissable" role ="alert">
+                <button class="close" data-dismiss="alert">
+                    <small><sup>x</sup></small>
+                  </button>
+               
+
+               {% for field in form%}
+               	{% if field.errors%}
+               		{{field.errors}}
+               	{% endif%}
+
+               	{% endfor %}
+
+
+              </div>
+
+
+
+		{% endif %}
+
+
+		{{ form.as_p }}
+
+
+		<input type="submit" value="Register" class=" btn btn-secondary">
+	</form>
+</div>
+{% endblock %}
+

@@ -1,0 +1,449 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>About|codewithshakyo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script>
+        window.alert(" Warning: This webpage is made by Shakyo and please don't take it personal beacause it might hurt you.")
+    </script>
+    <style>
+
+      #accordionPanelsStayOpenExample{
+        color: black;
+        animation-name: shakyo1260;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+      
+      }
+      @keyframes shakyo1260{
+    0%   {color:black;}
+  25%  {color:crimson;}
+  34%{
+  color:  rgb(158, 177, 197);
+  }
+  100% {color:navy-blue;}
+  }
+      
+  
+  #bid{
+    color:blue;
+    length:2000px;
+  }
+  #footer{
+          background: linear-gradient(to left, #8942a8, #ba382f);
+      }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .banner-text {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .banner-text ul {
+    height: 50px;
+    float: right;
+  }
+  .banner-text ul li {
+    display: inline-block;
+    padding: 40px 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+  }
+  .banner-text ul li:hover {
+    cursor: pointer;
+  }
+  .banner-text h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    margin-top: 20%;
+  }
+  .animation-area {
+    background: linear-gradient(to left, #8942a8, #ba382f);
+     animation-name: shakyo1260;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+    width: 100%;
+    height: 100vh;
+  }
+   
+  .box-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .box-area li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+  }
+  .box-area li:nth-child(1) {
+    left: 86%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+  }
+  .box-area li:nth-child(2) {
+    left: 12%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+  }
+  .box-area li:nth-child(3) {
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 5.5s;
+  }
+  .box-area li:nth-child(4) {
+    left: 42%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+  }
+  .box-area li:nth-child(5) {
+    left: 65%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 0s;
+  }
+  .box-area li:nth-child(6) {
+    left: 15%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3.5s;
+  }
+   @keyframes shakyo1260{
+    0%   {background-color:bisque;}
+  25%  {background-color:lightcyan;}
+  34%{
+  background-color:  rgb(158, 177, 197);
+  }
+  100% {background-color: cyan;}
+  }
+  @keyframes animate {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-800px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  
+ 
+  
+
+  
+  
+  
+     
+      </style>
+</head>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://i.pinimg.com/originals/58/c8/40/58c840666765cbc47737dac09b84781e.jpg" width="50" height="1000">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-brand" href="{% url 'homepage' %}">Home</a>
+    </div>
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link">
+        More
+      </a>
+      <a class="navbar-item" href="/login">
+        Login
+      </a>
+      <div class="navbar-dropdown">
+        <a class="navbar-item" href="/about">
+          About
+        </a>
+        <a class="navbar-item" href="/contact">
+          Contact
+        </a>
+        <a class="navbar-item" href="/announcements">
+        Announcements
+        </a>
+        <hr class="navbar-divider">
+        <a class="navbar-item" href="https://www.youtube.com/channel/UCsTBIx1rTYG_zYJVCqJEfoA">
+          YouTube Channel
+        </a>
+        <hr class="navbar-divider">
+        <a class="navbar-item">
+          Logged In As {{ user.username }}
+        </a>
+        <hr class="navbar-divider">
+        <a class="navbar-item">
+          User Id {{ user_id }}
+        </a>
+    
+        <hr class="navbar-divider">
+        <a class="navbar-item" href="{% url 'logout' %}">
+          Logout
+        </a>
+      </div>
+    </div>
+    <a class="navbar-item" href="https://github.com/Shakyo-choudhury">
+      GitHub!
+    </a>
+    
+    
+  </div>
+
+  <div class="navbar-end">
+    <div class="navbar-item">
+      <div class="buttons">
+        <a class="button is-primary" href="https://codewithshakyo.blogspot.com/">
+          <strong>Blog</strong>
+        </a>
+        <a class="button is-primary" href="/login">
+          <strong>Login</strong>
+        </a>
+        <a class="button is-light" href="/register">
+          Sign up
+        </a>
+      </div>
+    </div>
+
+   
+  </div>
+</div>
+
+</nav>
+<body class="animation-area">
+  <ul class="box-area">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+    <div class="box">
+        <div class="box">
+    <section class="hero is-link">
+        <img class="is-rounded" src="https://www.thesun.co.uk/wp-content/uploads/2019/03/NINTCHDBPICT000478923608.jpg">
+        <div class="hero-body">
+          <p class="title" >
+            Who is Shakyo?
+          </p>
+          <p class="subtitle">
+            Joker or Batman?
+          </p>
+        </div>
+        <progress class="progress is-small is-primary" max="100">15%</progress>
+      </section>
+    </div>
+</div>
+    <div class="box" >
+        <div class="box">
+            <div class="box">
+                <div class="box">
+                    <div class="box">
+    <article class="message is-link">
+        <div class="message-header">
+          <p>Who is Shakyo?</p>
+          
+        </div>
+        <div class="message-body">
+          Some guys say Shakyo is rude, talks rubbish, is an idiot, nags a lot and lots of stuff. But let's hear the story from the horse's mouth.
+        </div><progress class="progress is-small is-primary" max="100">15%</progress>
+      </article>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<div class="box">
+
+<div class="content">
+    <h1>The Beginning!</h1>
+    <p>codewithshakyo is an attempt by a 9th grader boy to teach programming in languages such as Python, JavaScript, HTML, CSS and many more in the near future.</p>
+    <h2>The inertia</h2>
+    <p>Just like any other creator I also have to face a lot of <strong>inertia</strong> and I don't feel great about it so I am creating this website to make things smoother. I have taken 24 days to make this website and my experience was just awesome. This website cosists of one contact page, one about page, sign-in/ sign-out page, home page, my Ai page this about page. </p>
+    <ul> 
+      <li>Things that are included in my course:</li>
+      <li>Python</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Java, C and C++</li>
+    </ul>
+    <h3>Languages used to make this website</h3>
+    <p>The languages used to make this website are:
+    </p>
+    <div class="box">
+      <div class="box">
+  <section class="hero is-link">
+      <img src="https://github.com/Shakyo-choudhury/pics/blob/main/shakyo1.JPG?raw=true">
+      <div class="hero-body">
+        <p class="title" >
+          The language used to make this website.
+        </p>
+        <p class="subtitle">
+         Django(python framework), CSS, JavaScript and HTML are the languages used to make this website.
+        </p>
+      </div>
+      <progress class="progress is-small is-primary" max="100">15%</progress>
+    </section>
+  </div>
+</div>
+    <ol>
+      <li>HTML</li>
+      <li>CSS(bulma and bootstrap)</li>
+      <li>Little JavaScript</li>
+      <li>Django(a python framework)</li>
+    </ol>
+    <blockquote>Note:If you guys want the sourcecode contact me I will upload the sourcecode on GitHub so that you can use it.</blockquote>
+    
+    <h4>Basic code of a HTML file</h4>
+    <p>The below code written is the basic code for Html files or your webpage. Try it out for your file.</p>
+    <pre>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;Hello World&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;p&gt;I am Shakyo and I have made this webpage.&lt;/p&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+  </pre>
+        </table>
+    <h5>Now let's start our journey</h5>
+    <p>We will start our coding journey with python because it is effective, fast and easy.</p>
+    <figure>
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://github.com/Shakyo-choudhury/pics/blob/main/shakyo.JPG?raw=true" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://media.istockphoto.com/photos/program-code-on-computer-display-in-magnifying-glass-closeup-picture-id1291641896?b=1&k=20&m=1291641896&s=170667a&w=0&h=rngBdwEZ6v6QpiSmQXTTtE75LxT6sjuH2MvTm_Y4ldY=" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://media.istockphoto.com/photos/code-programming-for-website-editors-view-picture-id1290492381?b=1&k=20&m=1290492381&s=170667a&w=0&h=NQSXJKhncCP1GLzDkD8KPZsCOh1wldDj5RZbPVJztxQ=" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <figcaption>
+        Some codes that I wrote.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto flex flex-col">
+    <div class="lg:w-4/6 mx-auto">
+      <div class="rounded-lg h-64 overflow-hidden">
+        <img alt="content" class="object-cover object-center h-full w-full" src="https://images.unsplash.com/photo-1454165205744-3b78555e5572?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
+      </div>
+      <div class="flex flex-col sm:flex-row mt-10">
+        <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+          <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
+            <img alt="blog" src="https://images.unsplash.com/photo-1526925539332-aa3b66e35444?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" class="w-20 h-20 rounded-full flex-shrink-0 object-cover object-center">
+             
+                          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+            <svg fill="none">
+              <circle cx="12" cy="7" r="4">
+                
+              </circle>
+            </svg>
+          </div>
+          <div class="flex flex-col items-center text-center justify-center">
+            <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">Shakyo</h2>
+            <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
+            <p class="text-base">Coder/Programmer(Begineer), footballer(NOOBDA 😅), table tennis player(NOOBDA 😅), cuber(NOOBDA 😅), YouTuber, and the developer of this webpage.</p>
+          </div>
+        </div>
+        <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+          <p class="leading-relaxed text-lg mb-4">Before leaving this webpage please check out my GitHub page, and my YouTube channel. Click on the below button to go to my GitHub page.</p>
+          <a class="text-indigo-500 inline-flex items-center" href="https://github.com/Shakyo-choudhury">GitHub Page!
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="text-gray-600 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900" href="https://www.youtube.com/channel/UCsTBIx1rTYG_zYJVCqJEfoA">
+      <svg >
+        <img alt="blog" src="https://images.unsplash.com/photo-1526925539332-aa3b66e35444?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">codewithshakyo</span>
+    </a>
+    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© codewithshakyo —
+      <a href="https://github.com/Shakyo-choudhury" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@Shakyo</a>
+    </p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      <a class="ml-3 text-gray-500" href="https://www.instagram.com/codewithshakyo/">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24" href="https://www.instagram.com/codewithshakyo/">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5" href="https://www.instagram.com/codewithshakyo/"></rect>
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" href="https://www.instagram.com/codewithshakyo/"></path>
+        </svg>
+      </a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>
+<!---->

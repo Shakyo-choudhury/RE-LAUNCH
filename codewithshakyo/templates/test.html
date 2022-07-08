@@ -1,0 +1,20 @@
+<form class="d iv jc offset-m1" id="form" action="post">
+    {% csrf_token %}
+    <div class="c">
+      <div class="d iv"><h2 class="section-title">Contact Us</h2></div>
+      <p>Have doubt or suggestion to make? Feel free to ask anything. If you have any suggestions, please let me know. Your suggestions are highly appreciated. I appreciate your time and try hard to reply to every single message posted here! Keep dropping your priceless opinions.</p>
+      <div class="input-field d ka">
+        <input id="name" name="name" type="text">
+        <label for="name">First Name</label>
+      </div>
+      <div class="input-field d ka">
+        <input id="email" type="email" id="email">
+        <label for="email">Email</label>
+      </div>
+      <div class="input-field d iv">
+        <textarea id="desc" name="desc" class="materialize-textarea"></textarea>
+        <label for="desc">Message</label>
+        <button class="waves-effect waves-light btn-large" type="submit">Button</button>
+      </div>
+    </div>
+  </form>

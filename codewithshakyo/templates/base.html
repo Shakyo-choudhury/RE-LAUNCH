@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>    
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{%block title%}{%endblock title%}|codewithshakyo</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <script>
+        function alert1(){
+          var sh1= document.getElementById('email').value;
+          var sh2=document.getElementById('desc').value;
+          var sh3=document.getElementById('username').value;
+          var sh4=document.getElementById('name').value;
+    
+          if(sh1==""){
+            window.alert('please enter your email ');
+          } 
+          if(sh2==""){
+            window.alert('please enter a message');
+          }
+          if(sh3==""){
+            window.alert('please enter your username')
+          }
+          if(sh4==""){
+            window.alert('please enter your name')
+          }
+          else{
+          window.alert("You message has been sent!");
+          }
+        } 
+        
+      </script> 
+  </head>
+
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+              <img src="https://i.pinimg.com/originals/58/c8/40/58c840666765cbc47737dac09b84781e.jpg" width="50" height="1000">
+            </a>
+        
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+        
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a class="navbar-brand" href="{% url 'homepage' %}">Home</a>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                More
+              </a>
+              <a class="navbar-item" href="/login">
+                Login
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="/about">
+                  About
+                </a>
+                <a class="navbar-item" href="/contact">
+                  Contact
+                </a>
+                <a class="navbar-item" href="/announcements">
+                Announcements
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item" href="https://www.youtube.com/channel/UCsTBIx1rTYG_zYJVCqJEfoA">
+                  YouTube Channel
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Logged In As {{ user.username }}
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  User Id {{ user_id }}
+                </a>
+            
+                <hr class="navbar-divider">
+                <a class="navbar-item" href="{% url 'logout' %}">
+                  Logout
+                </a>
+              </div>
+            </div>
+            <a class="navbar-item" href="https://github.com/Shakyo-choudhury">
+              GitHub!
+            </a>
+            
+            
+          </div>
+        
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary" href="https://codewithshakyo.blogspot.com/">
+                  <strong>Blog</strong>
+                </a>
+                <a class="button is-primary" href="/login">
+                  <strong>Login</strong>
+                </a>
+                <a class="button is-light" href="/register">
+                  Sign up
+                </a>
+              </div>
+            </div>
+        
+           
+          </div>
+        </div>
+        
+        </nav>
+          {%block body%} {%endblock body%}
+        </body>
+        </html>
